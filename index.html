@@ -3,21 +3,21 @@
     <head>
         <title>clappyjs</title>
         <link rel="stylesheet" href="style.css">
-				<script>
-					document.addEventListener('DOMContentLoaded',function() {
+        <script>
+          document.addEventListener('DOMContentLoaded',function() {
             var input = document.querySelector('#in');
-						input.onchange=changeEventHandler;
-						input.onpaste=changeEventHandler;
-						input.onkeyup=changeEventHandler;
-						input.oninput=changeEventHandler;
+            input.onchange=changeEventHandler;
+            input.onpaste=changeEventHandler;
+            input.onkeyup=changeEventHandler;
+            input.oninput=changeEventHandler;
             input.dispatchEvent(new Event('change'));
-					},false);
+          },false);
 
-					function changeEventHandler(event) {
+          function changeEventHandler(event) {
               var text = event.target.value.replace(/ /g, "\ud83d\udc4f");
               document.querySelector("#out").textContent = text;
-					}
-				</script>
+          }
+        </script>
 
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -32,7 +32,7 @@
     <body>
         <div id="container">
             <h1>clappyjs</h1>
-            Regulary, boring English &rarr; hip, emoji-filled text &#x1f602;&#x1f602;
+            Regular, boring English &rarr; hip, emoji-filled text &#x1f602;&#x1f602;
             <br /><br />
             <input id="in" value="Don't talk to me unless you use emojis"></input>
             <pre id="out">Loading...</pre>
