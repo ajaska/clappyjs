@@ -2,6 +2,7 @@
 <html>
     <head>
         <title>clappyjs</title>
+        <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
         <link rel="stylesheet" href="style.css">
         <script>
           document.addEventListener('DOMContentLoaded',function() {
@@ -14,7 +15,7 @@
           },false);
 
           function changeEventHandler(event) {
-              var text = event.target.value.replace(/ /g, "\ud83d\udc4f");
+              var text = event.target.value.replace(/ /g, " \ud83d\udc4f ");
               document.querySelector("#out").textContent = text;
           }
         </script>
@@ -30,20 +31,28 @@
         </script>
     </head>
     <body>
-        <div id="container">
-            <h1>clappyjs</h1>
-            Regular, boring English &rarr; hip, emoji-filled text &#x1f602;&#x1f602;
-            <br /><br />
-            <input id="in" value="Don't talk to me unless you use emojis"></input>
-            <pre id="out">Loading...</pre>
-
-            <div id="info">
-                umm... yap. please clap.<br />
-                inspiration by <a href="https://d.fuqu.jp/c++filtjs/">c++filtjs</a> <br />
-                <a href="https://github.com/ajaska/clappyjs">github</a>
+            <header>
+              <div class="container">
+              <h1>please clap js</h1>
+              <p class="meme">Regular, boring English &rarr; hip, emoji-filled text &#x1f602;&#x1f602;</p>
             </div>
-        </div>
+              <div id="inSection" class="container">
+                <input id="in" value="Don't talk to me unless you use emojis"></input>
+              </div>
+            </header>
+
+            <section id="yungOut">
+              <div id="outSection" class="container">
+              <div id="out">Loading...</div>
+              </div>
+            </section>
+
+            <footer>
+              <div id="info" class="container">
+                  umm... yap. please clap.<br />
+                  inspiration by <a href="https://d.fuqu.jp/c++filtjs/">c++filtjs</a> <br />
+                  <a href="https://github.com/ajaska/clappyjs">github</a>
+              </div>
+            </footer>
     </body>
 </html>
-
-
